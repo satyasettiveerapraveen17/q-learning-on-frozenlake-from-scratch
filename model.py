@@ -32,8 +32,9 @@ def greedy_action(q_table, state) -> int :
 
     return int((np.where(q_table[state]== max_state_value))[0][0])
 
-# Step 4 - sample_random_action (not yet solved)
-# TODO: implement
+# Step 4 - sample_random_action
+def sample_random_action(action_space):
+    return int(action_space.np_random.integers(action_space.n))
 
 # Step 5 - should_explore (not yet solved)
 # TODO: implement
