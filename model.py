@@ -22,8 +22,15 @@ def max_q_value(q_table, state) -> float :
     # TODO: index the row for `state` and return its maximum value
     return max(q_table[state])
 
-# Step 3 - greedy_action (not yet solved)
-# TODO: implement
+# Step 3 - greedy_action
+import numpy as np
+
+def greedy_action(q_table, state) -> int :
+    """Return the action index with the highest Q value at the given state."""
+    # TODO: return argmax over the action axis for this state's Q values
+    max_state_value = max(q_table[state])
+
+    return int((np.where(q_table[state]== max_state_value))[0][0])
 
 # Step 4 - sample_random_action (not yet solved)
 # TODO: implement
